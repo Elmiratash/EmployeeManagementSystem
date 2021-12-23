@@ -1,6 +1,6 @@
-const db = require("../router/connection");
+const db = require("../config/connection");
 const inquirer = require("inquirer");
-const { deptQuestions, empQuestions } = require("./allQuestions");
+const { deptQuestions, empQuestions } = require("./Questions");
 const {
     viewRoles,
     empTableJoined,
