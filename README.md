@@ -30,7 +30,7 @@ npm install
 Please check walkthrough vide
 
 Uploading EmployeeTracker.mp4…o:
-![EmployeeTracker]()
+![EmployeeTracker](https://watch.screencastify.com/v/kLZSsLIbYw52t6z8iupC)
 
 
 ## Usage
