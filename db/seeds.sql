@@ -1,24 +1,29 @@
 INSERT INTO department (name)
-VALUES ("Finance"),
-    ("Human Resources"),
-    ("Sales"),
-    ("Animal Control"),
-    ("Engineering"),
-    ("Management");
+VALUES ("engineering"),
+    ("finance"),
+    ("marketing"),
+    ("sales");
+SELECT *
+FROM DEPARTMENT;
+-- engineering department has engineers and project managers and engineering manager
+-- finance department has accountants and managers
+--  marketing department has product marketing manager, marketing lead
 INSERT INTO role (title, salary, department_id)
-VALUES ("Head Accounting", 50000, 1),
-    ("Health and Safety Coordinator", 35000, 2),
-    ("HR Manager", 60000, 6),
-    ("Animal Handler", 30000, 4),
-    ("Air Conditioning Engineer", 90000, 5),
-    ("Product Specialist", 45000, 3);
-INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Jamie", "Chu", 6),
-    ("Angela", "Chang", 3),
-    ("Hannah", "Lorayne", 4),
-    ("Alison", "Nguyen", 5);
-UPDATE employee
-SET manager_id = 2
-WHERE id = 1
-    or id = 3
-    or id = 4;
+VALUES ("software engineer", 120000, 1),
+    ("project manager", 90000, 1),
+    ("engineering manager", 225000, 1),
+    ("accountant", 70000, 2),
+    ("accounting manager", 120000, 2),
+    ("product marketing manager", 50000, 3),
+    ("marketing lead", 150000, 3),
+    ("sales rep", 85000, 4);
+SELECT *
+FROM ROLE;
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Spike", "Bulldog", 3, NULL),
+    ("Tom", "Cat", 3, 1),
+    ("Jerry", "Mouse", 1, 2),
+    ("Mickey", "Mouse", 1, 2),
+    ("Toots", "Mouse", 2, 1);
+SELECT *
+FROM employee;
