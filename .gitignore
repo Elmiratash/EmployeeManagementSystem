@@ -103,5 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
+#DS_Store
 .SD_Store
-/node_modules/
+**/.DS_Store

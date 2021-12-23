@@ -2,10 +2,9 @@
   "name": "employeemanagementsystem",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,12 @@
   },
   "homepage": "https://github.com/Elmiratash/EmployeeManagementSystem#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
-  },
-  "devDependencies": {}
+    "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
+    "figlet": "^1.5.2",
+    "i": "^0.3.7",
+    "inquirer": "^8.2.0",
+    "mysql": "^2.18.1",
+    "npm": "^8.3.0"
+  }
 }
