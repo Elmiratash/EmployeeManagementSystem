@@ -28,8 +28,8 @@ SO THAT I can organize and plan my business
 npm install
 
 Please check walkthrough video:
+![EmployeeTracker](https://watch.screencastify.com/v/kLZSsLIbYw52t6z8iupC)
 
-<iframe src="./Assets/ET.gif" width="640" height="480"></iframe>
 
 ## Usage
 
