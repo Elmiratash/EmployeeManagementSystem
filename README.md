@@ -27,11 +27,6 @@ SO THAT I can organize and plan my business
 
 npm install
 
-Please check walkthrough vide
-
-![EmployeeTracker](https://watch.screencastify.com/v/yOQ1txyxUMS47Ir63qwn)
-
-
 
 ## Usage
 
