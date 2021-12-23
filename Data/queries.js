@@ -1,41 +1,23 @@
-const addQuestions = {
-    deptQuestions: [{
-            type: "input",
-            name: "roleNameInputVal",
-            message: "What is the name of the new Role?",
-        },
-        {
-            type: "input",
-            name: "roleSalaryInputVal",
-            message: "What is the salary for the new Role?",
-        },
-        {
-            type: "input",
-            name: "roleDeptInputVal",
-            message: "What is the department ID of the new Role? (see table above)",
-        },
-    ],
-    empQuestions: [{
-            type: "input",
-            name: "empFNInputVal",
-            message: "What is the employee's first name?",
-        },
-        {
-            type: "input",
-            name: "empLNInputVal",
-            message: "What is the employee's last name?",
-        },
-        {
-            type: "input",
-            name: "empRoleInputVal",
-            message: "What is the employee's role id? (see table above)",
-        },
-        {
-            type: "input",
-            name: "empManInputVal",
-            message: "Who is the employee's manager? (input by manager's id)",
-        },
-    ],
-};
+const queries = {
 
-module.exports = addQuestions;
+    empTableJoined: `SELECT employee.id, employee.first_name, employee.last_name,
+    department.name AS dept_name,
+    role.title AS title
+    
+    FROM employee
+    LEFT JOIN role ON employee.role_id = role.id
+    LEFT JOIN department ON role.department_id = department.id`,
+
+    viewRoles: `SELECT * FROM role`,
+
+    viewDept: `SELECT * FROM department`,
+
+    viewEmp: `SELECT * FROM employee`,
+
+    insertDept: `INSERT INTO department SET ?;`
+
+
+
+}
+
+module.exports = queries;

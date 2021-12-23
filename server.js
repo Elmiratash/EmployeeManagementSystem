@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-const initQuestions = require('./data/initQuestions');
-const verifyAnswer = require('./utils/verifyAnswer');
+const initQuestions = require('./Data/init');
+const verifyAnswer = require('./utils/modul');
 
 
 function init() {

@@ -1,4 +1,4 @@
-const db = require("../db/connection");
+const db = require("../router/connection");
 const inquirer = require("inquirer");
 const { deptQuestions, empQuestions } = require("./allQuestions");
 const {

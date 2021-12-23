@@ -7,7 +7,7 @@ const {
     addEmpFunc,
     exitFunc,
     updEmpRoleFunc,
-} = require("../data/allFunctions");
+} = require("../Data/function");
 
 function verifyAnswer(selectedAction, initFunc) {
     switch (selectedAction) {
