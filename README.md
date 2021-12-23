@@ -27,10 +27,6 @@ SO THAT I can organize and plan my business
 
 npm install
 
-Please check walkthrough video:
-
-<iframe src="./Assets/ET.gif" width="640" height="480"></iframe>
-
 ## Usage
 
 A command-line application that at a minimum allows the user to:
