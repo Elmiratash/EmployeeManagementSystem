@@ -29,7 +29,8 @@ npm install
 
 Please check walkthrough vide
 
-![EmployeeTracker](https://watch.screencastify.com/v/kLZSsLIbYw52t6z8iupC)
+![EmployeeTracker](https://watch.screencastify.com/v/yOQ1txyxUMS47Ir63qwn)
+
 
 
 ## Usage
