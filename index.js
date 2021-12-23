@@ -1,5 +1,5 @@
 require('dotenv').config();
-const mysql = require('mysql2');
+const mysql = require('mysql');
 const inquier = require('inquirer');
 const cTable = require('console.table');
 const figlet = require('figlet');
@@ -85,6 +85,32 @@ function startPrompt() {
             console.error(err);
         });
 }
+
+
+const viewAll = (table) => {
+    // const query = `SELECT * FROM ${table}`;
+    let query;
+    if (table === "DEPARTMENT") {
+        query = `SELECT * FROM DEPARTMENT`;
+    } else if (table === "ROLE") {
+        query = `SELECT R.id AS id, title, salary, D.name AS department
+    FROM ROLE AS R LEFT JOIN DEPARTMENT AS D
+    ON R.department_id = D.id;`;
+    } else { //employee
+        query = `SELECT E.id AS id, E.first_name AS first_name, E.last_name AS last_name, 
+    R.title AS role, D.name AS department, CONCAT(M.first_name, " ", M.last_name) AS manager
+    FROM EMPLOYEE AS E LEFT JOIN ROLE AS R ON E.role_id = R.id
+    LEFT JOIN DEPARTMENT AS D ON R.department_id = D.id
+    LEFT JOIN EMPLOYEE AS M ON E.manager_id = M.id;`;
+
+    }
+    connection.query(query, (err, res) => {
+        if (err) throw err;
+        console.table(res);
+
+        startPrompt();
+    });
+};
 
 const addNewDepartment = () => {
     let questions = [{
@@ -284,6 +310,48 @@ const updateRole = () => {
     });
 }
 
+const viewEmployeeByManager = () => {
+    //get all the employee list 
+    connection.query("SELECT * FROM EMPLOYEE", (err, emplRes) => {
+        if (err) throw err;
+        const employeeChoice = [{
+            name: 'None',
+            value: 0
+        }];
+        emplRes.forEach(({ first_name, last_name, id }) => {
+            employeeChoice.push({
+                name: first_name + " " + last_name,
+                value: id
+            });
+        });
+
+        let questions = [{
+            type: "list",
+            name: "manager_id",
+            choices: employeeChoice,
+            message: "whose role do you want to update?"
+        }, ]
+
+        inquier.prompt(questions)
+            .then(response => {
+                let manager_id, query;
+                if (response.manager_id) {
+                    query = ``;
+                } else {
+                    manager_id = null;
+                    query = ``;
+                }
+                connection.query(query, [response.manager_id], (err, res) => {
+                    if (err) throw err;
+                    console.table(res);
+                    startPrompt();
+                });
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    });
+}
 
 const updateManager = () => {
     //get all the employee list 
@@ -468,7 +536,7 @@ const viewBudget = () => {
 
         inquier.prompt(questions)
             .then(response => {
-                const query = `SELECT D.name, SUM(salary) AS budget FROM EMPLOYEE AS E LEFT JOIN ROLE AS R ON E.role_id = R.id LEFT JOIN DEPARTMENT AS D ON R.department_id = D.id WHERE D.id = ?`;
+                const query = ``;
                 connection.query(query, [response.id], (err, res) => {
                     if (err) throw err;
                     console.table(res);
