@@ -27,8 +27,10 @@ SO THAT I can organize and plan my business
 
 npm install
 
-Please check walkthrough video:
-![EmployeeTracker](https://watch.screencastify.com/v/kLZSsLIbYw52t6z8iupC)
+Please check walkthrough vide
+
+Uploading EmployeeTracker.mp4…o:
+![EmployeeTracker]()
 
 
 ## Usage
