@@ -104,3 +104,4 @@ dist
 .tern-port
 
 .SD_Store
+/node_modules/
