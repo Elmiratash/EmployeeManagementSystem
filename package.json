@@ -20,5 +20,6 @@
   "homepage": "https://github.com/Elmiratash/EmployeeManagementSystem#readme",
   "dependencies": {
     "inquirer": "^8.2.0"
-  }
+  },
+  "devDependencies": {}
 }

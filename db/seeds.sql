@@ -1,26 +1,49 @@
-INSERT INTO department (name)
-VALUES ('Front Desk'),
-    ('Sales'),
-    ('Management'),
-    ('Technician');
-INSERT INTO role (title, salary, department_id)
-VALUES ("Customer Service", 35000, 1),
-    ("Senior Management", 65000, 3),
-    ("Supervisor", 45000, 3),
-    ("Car Audio", 30000, 2),
-    ("Car Install", 40000, 4),
-    ("Home Theater", 30000, 2),
-    ("Computers", 30000, 2),
-    ("Not a Geek", 45000, 4),
-    ("Store Manager", 120000, 3);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Mike", "McEwen", 9, NULL),
-    ("Linday", "McEwen", 2, 1),
-    ("Eleanor", "McEwen", 6, 2),
-    ("Oliver", "McEwen", 7, 2),
-    ("Anderson", "McEwen", 5, 2),
-    ("Adaline", "McEwen", 3, 2),
-    ("Bark", "Tree", 8, 6),
-    ("Willow", "Birch", 6, 6),
-    ("Frank", "Sanatra", 1, 2),
-    ("Bryson", "Taylor", 4, 6);
+-- Pre-populates department values --
+INSERT INTO department(name)
+VALUES('Accounting and Finance');
+INSERT INTO department(name)
+VALUES('Marketing');
+INSERT INTO department(name)
+VALUES('Human Resource Management');
+INSERT INTO department(name)
+VALUES('Information Technology');
+-- Pre-populates role values --
+INSERT INTO role(title, salary, department_id)
+VALUES('Accounting Manager', 80000, 1);
+INSERT INTO role(title, salary, department_id)
+VALUES('Accountant', 60000, 1);
+INSERT INTO role(title, salary, department_id)
+VALUES('Marketing Manager', 100000, 2);
+INSERT INTO role(title, salary, department_id)
+VALUES('Marketing Specialist', 70000, 2);
+INSERT INTO role(title, salary, department_id)
+VALUES('HR Manager', 90000, 3);
+INSERT INTO role(title, salary, department_id)
+VALUES('HR Administrator', 60000, 3);
+INSERT INTO role(title, salary, department_id)
+VALUES('IT Manager', 95000, 4);
+INSERT INTO role(title, salary, department_id)
+VALUES('IT Consultant', 75000, 4);
+-- Pre-populates employee values --
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Samantha', 'Smith', 1, null);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Jack', 'Tang', 2, 1);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Amelia', 'Thompson', 2, 1);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Eliza', 'Wilkinson', 3, null);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Brie', 'Singh', 4, 3);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Chris', 'Rodriguez', 4, 3);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Tyler', 'McHatton', 5, null);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Billy', 'Kwon', 6, 5);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Mandy', 'Antonov', 7, null);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Kai', 'Murasaki', 8, 7);
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES('Ben', 'Rossi', 8, 7);

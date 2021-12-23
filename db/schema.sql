@@ -1,24 +1,35 @@
-DROP TABLE IF EXISTS employee;
-DROP TABLE IF EXISTS role;
-DROP TABLE IF EXISTS department;
+DROP DATABASE IF EXISTS employee_tracker_db;
+CREATE DATABASE employee_tracker_db;
+USE employee_tracker_db;
 CREATE TABLE department (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30)
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(30),
+    PRIMARY KEY(id)
 );
 CREATE TABLE role (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(30),
     salary DECIMAL,
-    department_id INTEGER,
-    CONSTRAINT fk_deptID FOREIGN KEY(department_id) REFERENCES department(id) ON DELETE
+    department_id INT,
+    PRIMARY KEY(id),
+    FOREIGN KEY(department_id) REFERENCES department(id) ON DELETE
     SET NULL
 );
 CREATE TABLE employee (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
-    role_id INTEGER,
-    manager_id INTEGER references employee(id) ON update cascade,
-    CONSTRAINT fk_role FOREIGN KEY(role_id) REFERENCES role(id) ON DELETE
+    role_id INT,
+    manager_id INT,
+    PRIMARY KEY(id),
+    FOREIGN KEY(role_id) REFERENCES role(id) ON DELETE
+    SET NULL,
+        FOREIGN KEY(manager_id) REFERENCES employee(id) ON DELETE
     SET NULL
 );
+SELECT *
+FROM department;
+SELECT *
+FROM role;
+SELECT *
+FROM employee;
