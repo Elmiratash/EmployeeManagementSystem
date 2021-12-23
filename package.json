@@ -1,29 +1,30 @@
 {
-  "name": "employeemanagementsystem",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Elmiratash/EmployeeManagementSystem.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Elmiratash/EmployeeManagementSystem/issues"
-  },
-  "homepage": "https://github.com/Elmiratash/EmployeeManagementSystem#readme",
-  "dependencies": {
-    "console.table": "^0.10.0",
-    "dotenv": "^10.0.0",
-    "figlet": "^1.5.2",
-    "i": "^0.3.7",
-    "inquirer": "^8.2.0",
-    "mysql": "^2.18.1",
-    "npm": "^8.3.0"
-  }
+    "name": "employeemanagementsystem",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Elmiratash/EmployeeManagementSystem.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Elmiratash/EmployeeManagementSystem/issues"
+    },
+    "homepage": "https://github.com/Elmiratash/EmployeeManagementSystem#readme",
+    "dependencies": {
+        "console.table": "^0.10.0",
+        "dotenv": "^10.0.0",
+        "figlet": "^1.5.2",
+        "i": "^0.3.7",
+        "inquirer": "^8.2.0",
+        "mysql": "^2.18.1",
+        "npm": "^8.3.0"
+    }
 }
