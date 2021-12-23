@@ -29,6 +29,8 @@ npm install
 
 Please check walkthrough video:
 
+<iframe src="https://drive.google.com/file/d/1ufTomxTRd6E80V8e1SSt1NloJp468WBU/preview" width="640" height="480"></iframe>
+
 ## Usage
 
 A command-line application that at a minimum allows the user to:
